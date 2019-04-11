@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Tryouts: CSv to Id</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#020202" />
+    <style media="screen">
+      #progress_bar {
+        margin: 10px 0;
+        padding: 3px;
+        border: 1px solid #000;
+        font-size: 14px;
+        clear: both;
+        opacity: 0;
+        -moz-transition: opacity 1s linear;
+        -o-transition: opacity 1s linear;
+        -webkit-transition: opacity 1s linear;
+      }
+      #progress_bar.loading {
+        opacity: 1;
+      }
+      #progress_bar .percent {
+        background-color: #99ccff;
+        height: auto;
+        width: 0;
+      }
+      .topShelf {
+        width: 100%;
+        height: 50px;
+        margin: 0 0 0 0;
+        padding: 0;
+        background: #020202;
+        color: #feefef;
+      }
+      .fileLoad {
+        width: 70%;
+        height: 240px;
+        margin: auto;
+        padding: 0;
+        background: #ca817e;
+        color: #feefef;
+      }
+      .file {
+        padding: 0;
+        background: bisque;
+        width: 80%;
+        margin: auto;
+      }
+      div .form-group {
+        margin-top: 20px;
+      }
+      .prompt {
+        width: 100%;
+        height: 180px;
+
+        color: #202020;
+      }
+      .idBox1 {
+        width: 200px;
+        height: fit-content;
+        margin: auto;
+        position: relative;
+      }
+      .idBox1 img {
+        width: 100%;
+        height: auto;
+        display: block;
+        box-sizing: border-box;
+        min-height: 120px;
+      }
+      .tester1 img {
+        width: 100%;
+        height: auto;
+        display: block;
+        box-sizing: border-box;
+        min-height: 120px;
+      }
+      .tester {
+        width: 93px;
+        height: 120px;
+        position: absolute;
+        bottom: 3%;
+        left: 27%;
+        border-style: solid;
+        border-color: #000;
+        border-width: medium;
+      }
+      .top {
+        width: 100%;
+        height: 75%;
+        background: #0cc;
+        top: 0;
+        position: relative;
+        opacity: 0.5;
+        margin: 0;
+      }
+      .top1 {
+        width: 100%;
+        height: 75%;
+        background: #0cc;
+        top: 0;
+        position: relative;
+        opacity: 0.5;
+        margin: 0;
+      }
+      /* .tester1 {
+        width: 93px;
+        height: 120px;
+        position: absolute;
+        top: 35%;
+        left: 27%;
+        border-style: solid;
+        border-color: #000;
+        border-width: medium;
+        overflow: hidden;
+      } */
+      .tester1 {
+        width: 95px;
+        height: 124px;
+        position: absolute;
+        top: 35%;
+        left: 26%;
+        border-style: solid;
+        border-color: #fefefe00;
+        border-width: medium;
+        overflow: hidden;
+      }
+      .bottom {
+        position: absolute;
+        top: 75%;
+        left: 25%;
+      }
+      .barcode {
+        position: absolute;
+        top: 88.5%;
+        left: 7%;
+      }
+      .bottom p {
+        margin: 0;
+        font-size: 0.4rem;
+      }
+      .tiga {
+        /* color: #cc94c9; */
+        color: #ca90c6;
+      }
+    </style>
+  </head>
+  <body id="body">
+    <div class="container-fluid">
+      <div class="jumbotron topShelf">
+        <h1 class="h3 text-center">Fake ID</h1>
+      </div>
+      <div class="jumbotron fileLoad" id="prompt">
+        <div class="row align-items-center justify-content-md-center">
+          <div class=" col-6">
+            <div class="form-group">
+              <label for="csvFile" class="file">Upload Csv File</label>
+              <input
+                type="file"
+                class="form-control file"
+                id="csvFile"
+                aria-aria-describedby="csvHelp"
+              />
+              <small id="csvHelp" class="form-text text-warning"
+                >Strictly CSV files Please</small
+              >
+              <div id="progress_bar"><div class="percent">0%</div></div>
+            </div>
+            <div class="row" id="buttonspace"></div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="jumbotron prompt" id="prompt"></div> -->
+      <div class="container"><div class="row" id="filler"></div></div>
+      <div class="container"></div>
+    </div>
+
+    <script src="js/jquery.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/JsBarcode.all.min.js"></script>
+
+    <script type="text/javascript" src="js/html2canvas.js"></script>
+    <script type="text/javascript" src="js/csv2json.js"></script>
+    <script src="js/prodScript.js" charset="utf-8"></script>
+  </body>
+</html>
